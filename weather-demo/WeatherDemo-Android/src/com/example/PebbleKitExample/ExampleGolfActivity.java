@@ -19,11 +19,12 @@ import java.util.Random;
  * one of Pebble's built-in sports watch-apps.
  */
 public class ExampleGolfActivity extends Activity {
-
+    
     private final Random rand = new Random();
     private PebbleKit.PebbleDataReceiver dataReceiver;
     private int appData[][] = new int[18][4];
     private int selection = 0;
+    private BluetoothService service; 
 
     // Generate random (but somewhat believable) values to be displayed on the watch.
     private void generateGolfData() {
