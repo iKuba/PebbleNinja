@@ -19,6 +19,7 @@ public class MainActivity extends ListActivity {
                 "Sports App Example",
                 "Golf App Example",
                 "Weather App Example",
+                "Bluetooth Example",
                 "To-Do List Example",
                 "GPS/SMS App Example",
                 "GCM Activity"
