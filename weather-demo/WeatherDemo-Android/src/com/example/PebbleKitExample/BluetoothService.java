@@ -13,6 +13,8 @@ import java.lang.reflect.Method;
 import java.util.UUID;
  
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 
 import android.bluetooth.BluetoothAdapter;
@@ -43,14 +45,11 @@ import android.widget.Toast;
 
   
 
-public class ExampleGolfActivity extends Activity {
+@TargetApi(Build.VERSION_CODES.ECLAIR)
+@SuppressLint("NewApi")
+public class BluetoothService extends Activity {
 
   private static final String TAG = "bluetooth2";
-
-    
-
-  TextView txtArduino;
-
   Handler h;
 
     
@@ -77,7 +76,7 @@ public class ExampleGolfActivity extends Activity {
 
   // MAC-address of Bluetooth module (you must edit this line)
 
-  private static String address = "00:15:FF:F2:19:5F";
+  private static String address = "00:06:66:63:25:33";
 
     
 
@@ -85,19 +84,10 @@ public class ExampleGolfActivity extends Activity {
 
   @Override
 
-  public void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(Bundle savedInstanceState) {
 
     super.onCreate(savedInstanceState);
-
-  
-
-    setContentView(R.layout.activity_main);
-
-  
-
-    txtArduino = (TextView) findViewById(R.id.txtArduino);      // for display the received data from the Arduino
-
-     
+    setContentView(R.layout.activity_bluetooth);
 
     h = new Handler() {
 
@@ -121,12 +111,11 @@ public class ExampleGolfActivity extends Activity {
 
                     sb.delete(0, sb.length());                                      // and clear
 
-                    txtArduino.setText("Data from Arduino: " + sbprint);            // update TextView
+                    System.out.println(sb);
 
                 }
 
-                //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
-
+                Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
                 break;
 
             }
@@ -145,8 +134,6 @@ public class ExampleGolfActivity extends Activity {
 
   private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException {
 
-      if(Build.VERSION.SDK_INT >= 10){
-
           try {
 
               final Method  m = device.getClass().getMethod("createInsecureRfcommSocketToServiceRecord", new Class[] { UUID.class });
@@ -159,15 +146,14 @@ public class ExampleGolfActivity extends Activity {
 
           }
 
-      }
-
       return  device.createRfcommSocketToServiceRecord(MY_UUID);
 
   }
 
     
 
-  @Override
+  @SuppressLint("NewApi")
+@Override
 
   public void onResume() {
 
@@ -325,9 +311,9 @@ public class ExampleGolfActivity extends Activity {
 
   private class ConnectedThread extends Thread {
 
-        private final InputStream mmInStream;
+        private InputStream mmInStream = null;
 
-        private final OutputStream mmOutStream;
+        private OutputStream mmOutStream = null;
 
       
 

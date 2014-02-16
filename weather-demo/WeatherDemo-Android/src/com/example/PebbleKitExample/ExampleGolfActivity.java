@@ -24,7 +24,7 @@ public class ExampleGolfActivity extends Activity {
     private PebbleKit.PebbleDataReceiver dataReceiver;
     private int appData[][] = new int[18][4];
     private int selection = 0;
-    private BluetoothService service; 
+    private BluetoothService service = null; 
 
     // Generate random (but somewhat believable) values to be displayed on the watch.
     private void generateGolfData() {

@@ -179,7 +179,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int add_mi=0x7f060017;
-        public static final int button=0x7f06000c;
+        public static final int button=0x7f060007;
         public static final int button1=0x7f06000d;
         public static final int button2=0x7f06000e;
         public static final int button3=0x7f060010;
@@ -197,39 +197,41 @@ containing a value of this type.
         public static final int remove_all_checked_mi=0x7f060018;
         public static final int status=0x7f060014;
         public static final int text=0x7f060016;
-        public static final int textBack=0x7f060008;
-        public static final int textFront=0x7f06000a;
-        public static final int textGcmStatus=0x7f060007;
-        public static final int textHole=0x7f06000b;
-        public static final int textMiddle=0x7f060009;
+        public static final int textBack=0x7f060009;
+        public static final int textFront=0x7f06000b;
+        public static final int textGcmStatus=0x7f060008;
+        public static final int textHole=0x7f06000c;
+        public static final int textMiddle=0x7f06000a;
         public static final int todo_list_add_item_dialog_description=0x7f060015;
     }
     public static final class layout {
-        public static final int activity_gcm=0x7f030000;
-        public static final int activity_golf=0x7f030001;
-        public static final int activity_sms=0x7f030002;
-        public static final int activity_sports=0x7f030003;
-        public static final int activity_todo_list=0x7f030004;
-        public static final int activity_weather=0x7f030005;
-        public static final int checkable_main=0x7f030006;
-        public static final int dialog_add_todo_item=0x7f030007;
-        public static final int list_item_checkable=0x7f030008;
-        public static final int main=0x7f030009;
+        public static final int activity_bluetooth=0x7f030000;
+        public static final int activity_gcm=0x7f030001;
+        public static final int activity_golf=0x7f030002;
+        public static final int activity_sms=0x7f030003;
+        public static final int activity_sports=0x7f030004;
+        public static final int activity_todo_list=0x7f030005;
+        public static final int activity_weather=0x7f030006;
+        public static final int checkable_main=0x7f030007;
+        public static final int dialog_add_todo_item=0x7f030008;
+        public static final int list_item_checkable=0x7f030009;
+        public static final int main=0x7f03000a;
     }
     public static final class menu {
         public static final int options_menu=0x7f080000;
     }
     public static final class string {
-        public static final int activity_gcm=0x7f040009;
+        public static final int activity_bluetooth=0x7f040005;
+        public static final int activity_gcm=0x7f04000a;
         public static final int activity_golf=0x7f040001;
-        public static final int activity_sms=0x7f040008;
+        public static final int activity_sms=0x7f040009;
         public static final int activity_sports=0x7f040002;
         public static final int activity_todo_list=0x7f040004;
         public static final int activity_weather=0x7f040003;
         public static final int app_name=0x7f040000;
-        public static final int todo_list_add_dialog_cancel_button=0x7f040007;
-        public static final int todo_list_add_dialog_ok_button=0x7f040006;
-        public static final int todo_list_add_item_dialog_description_hint=0x7f040005;
+        public static final int todo_list_add_dialog_cancel_button=0x7f040008;
+        public static final int todo_list_add_dialog_ok_button=0x7f040007;
+        public static final int todo_list_add_item_dialog_description_hint=0x7f040006;
     }
     public static final class styleable {
         /** Attributes that can be used with a DragSortListView.

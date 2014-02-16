@@ -50,6 +50,12 @@
       android:label="@string/activity_weather">
 
     </activity>
+    
+     <activity
+          android:name=".BluetoothService"
+          android:label="@string/activity_bluetooth">
+      </activity>
+    
 
     <activity
       android:name=".TodoList.ExampleTodoListActivity"
@@ -62,6 +68,9 @@
           android:label="@string/activity_sms">
 
       </activity>
+      
+
+
 
     <activity
        android:name=".ExampleGCMActivity"

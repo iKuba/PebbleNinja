@@ -5,6 +5,7 @@
   <string name="activity_sports">Sports App Example</string>
   <string name="activity_weather">Weather App Example</string>
   <string name="activity_todo_list">To-Do List Example</string>
+  <string name="activity_bluetooth">Bluetooth Example</string>
   <string-array name="jazz_artist_names">
       <item>Brad Mehldau</item>
       <item>Joshua Redman</item>
